@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Application architecture
+- Keep service definitions and example content in a shared browser-safe module; a typed dynamic service route renders the 17 frontend experiences consistently.
+- Keep all interactions client-side and explicitly identify sample data and account previews; no connected services exist.
