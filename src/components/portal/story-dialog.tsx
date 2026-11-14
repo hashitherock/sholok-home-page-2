@@ -1,0 +1,3 @@
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { stories } from '@/lib/portal-data';
+export function StoryDialog({story,onClose}:{story:typeof stories[number]|null,onClose:()=>void}){return <Dialog open={!!story} onOpenChange={open=>!open&&onClose()}><DialogContent className="story-dialog">{story&&<><img src={story.image} alt={story.title} width={1440} height={960}/><DialogHeader><DialogDescription>{story.category} · {story.source} · Sample editorial</DialogDescription><DialogTitle>{story.title}</DialogTitle></DialogHeader><p>{story.text}</p></>}</DialogContent></Dialog>}
